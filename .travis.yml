@@ -1,17 +1,16 @@
 language: node_js
 node_js:
-  - lts/*
-cache: yarn
+  - node
 
 install: 
-  - yarn install
+  - npm ci
 
 script: 
- - yarn test
- - yarn run build
+  - npm lint
+  - npm test
 
  deploy:
-  provider: pages
+  provider: heroku
   skip-cleanup: true
   github_token: $GITHUB_TOKEN
   on:
