@@ -1,19 +1,15 @@
 language: node_js
 node_js:
-  - lts/*
-cache: yarn
+  - node
 
 install: 
-  - yarn install
+  - npm test
+  - make test
 
 script: 
- - yarn test
- - yarn run build
+ - npm test
+ - npm run build
 
- deploy:
-  provider: pages
-  skip-cleanup: true
-  github_token: $GITHUB_TOKEN
-  on:
-    branch: master
+cache: npm
+
 
