@@ -77,12 +77,13 @@
   
         <div class="container"> 
             <label><b>Username</b></label> 
-            <input type="text" placeholder="Enter Username" name="uname" required> 
+            <input type="text" placeholder="Enter Username" id="uname" required> 
   
             <label><b>Password</b></label> 
-            <input type="password" placeholder="Enter Password" name="psw" required> 
+            <input type="password" placeholder="Enter Password" id="psw" required> 
   
-            <button type="submit">Login</button>
+            <button type="submit" onclick="validate()">Login</button>
+            
             <button onclick="document.location='SignUpForm.html'">Sign Up</button> 
             <input type="checkbox" checked="checked"> Remember me 
         </div> 
@@ -92,5 +93,21 @@
             <button class="cancelbtn" onclick="document.location='HomePage.html'">Cancel</button>
             <span class="psw">Forgot <a href="#">password?</a></span> 
         </div> 
-    </form> 
+    </form>
+    <script type="text/javascript">
+        function validate()
+        {
+            if(   document.getElementById("uname").value == "moderator"
+               && document.getElementById("psw").value == "password" )
+            {
+                alert( "validation succeeded" );
+                location.href="ModeratorHomePage";
+            }
+            else
+            {
+                alert( "validation failed" );
+                location.href="LoginForm";
+            }
+        }
+        </script> 
     </body>
