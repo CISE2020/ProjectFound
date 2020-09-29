@@ -73,7 +73,7 @@
         <h2>Login Form</h2> 
         
     <!--Step 1 : Adding HTML-->
-    <form action="/action_page.php"> 
+    <form> 
   
         <div class="container"> 
             <label><b>Username</b></label> 
@@ -101,10 +101,7 @@
             && document.getElementById("psw").value == "password")
         {
             alert( "Validation Successful" );
-        }
-        else if(document.getElementById("uname").value == ""
-            && document.getElementById("psw").value == "")
-        {
+            window.location.replace("ModeratorHomePage.html");
         }
         else if(document.getElementById("uname").value != "moderator"
             && document.getElementById("psw").value != "password")
