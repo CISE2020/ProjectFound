@@ -73,7 +73,7 @@
         <h2>Login Form</h2> 
         
     <!--Step 1 : Adding HTML-->
-    <form> 
+    <form name="Login"> 
   
         <div class="container"> 
             <label><b>Username</b></label> 
@@ -84,7 +84,7 @@
   
             <button onclick="javascript:validate()">Login</button>
             
-            <button onclick="document.location='SignUpForm.html'">Sign Up</button> 
+            <button class="submit" onclick="document.location='SignUpForm.html'">Sign Up</button> 
             <input type="checkbox" checked="checked"> Remember me 
         </div> 
   
@@ -101,7 +101,7 @@
             && document.getElementById("psw").value == "password")
         {
             alert( "Validation Successful" );
-            window.location.replace("ModeratorHomePage.html");
+            window.location.href="https://www.youtube.com/watch?v=mJa_3IiKxFk";
         }
         else if(document.getElementById("uname").value != "moderator"
             && document.getElementById("psw").value != "password")
