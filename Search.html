@@ -1,5 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
 
-  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -8,6 +9,24 @@
         cursor: pointer;
         color:#fff;
             }
+    /*set extra style for the cancel button*/ 
+          
+    .cancelbtn { 
+        width: auto; 
+        padding: 10px 18px; 
+        background-color: #f44336; 
+        } 
+    /*set a style for the buttons*/ 
+          
+    button { 
+        background-color: #4CAF50; 
+        color: white; 
+        padding: 14px 20px; 
+        margin: 8px 0; 
+        border: none; 
+        cursor: pointer; 
+        width: 100%; 
+        }
 </style>
 
 <div class="row">
@@ -104,3 +123,9 @@ function buildTable(data){
 
 </script>
 
+<body>
+    <div class="container" style="background-color:#f1f1f1"> 
+        <!-- <button type="button" class="cancelbtn">Cancel<a href= "HomePage.html"_self"> </a></button> -->
+        <button class="cancelbtn" onclick="document.location='HomePage.html'">Cancel</button>
+    </div> 
+</body>
