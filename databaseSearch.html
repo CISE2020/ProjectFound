@@ -1,218 +1,298 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <title>SEER Program</title>
-        <link rel="shortcut icon" href="a198cd0c_e2f0_4c99_ba51_342624a24db9_WP4_icon.ico" type="image/x-icon"/>
-        <link href = "https://fonts.googleapis.com/css?family=Nunito+Sans:400,900&display=swap" rel="stylesheet">
-        <style>
-        * {
-          box-sizing: border-box;
-        }
-        body,#artInput{text-align: center;}
-        #artInput {
-          background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/221px-Vector_search_icon.svg.png');
-          background-position: 10px 10px;;
-          background-repeat: no-repeat;
-          background-size: 25px;
-          width: 60%;
-          font-size: 16px;
-          padding: 12px 20px 12px 40px;
-          border: 1px solid #ddd;
-          margin-bottom: 12px;
-          border-radius: 25px;
-        }
-        #artInput:focus {
-          outline:none
-        }
-        #artTable {
-          border-collapse: collapse;
-          width: 85%;
-          border: 1px solid #ddd;
-          font-size: 18px;
-          margin-bottom:40px;
-        }
-        #artTable th, #artTable td {
-          text-align: left;
-          padding: 12px;
-          text-align: center;
-        
-        }
-        #artTable tr {
-          border-bottom: 1px solid #ddd;
-        
-        }
-        #artTable tr.header, #artTable tr:hover {
-          background-color: #f1f1f1;
-        
-        }
-        a {
-          color: #f56642;
-        }
-        
-        h2, h1, p {
-          font-family: 'Nunito Sans', sans-serif;
-        }
-        h1:hover {
-          animation-name: artshadow;
-          animation-timing-function: ease-in-out;
-          animation-fill-mode: both;
-          animation-duration: 0.5s;
-          animation-delay: 0.1s;
-        }
-        
-        @keyframes artshadow {
-          from {}
-          to {text-shadow: 2px 2px 5px black;}
-        }
-        h1 {
-          color: #f56642;
-          transition: 0.3s;
-        }
-        </style>
-        </head>
 
-    <body>
-        <h1><b>SEER Program</b></h1>
-        <h2>search articles by name, author, and more</h2>
-        <div class="centerenter">
-        <input type="text" id="artInput" onkeyup="artFunction()" placeholder="name, date, author..." title="Work search">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>SEER Program</title>
+    <link rel="shortcut icon" href="a198cd0c_e2f0_4c99_ba51_342624a24db9_WP4_icon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body,
+        #SEInput {
+            text-align: center;
+        }
+
+        #SEInput {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/221px-Vector_search_icon.svg.png');
+            background-position: 10px 10px;
+            ;
+            background-repeat: no-repeat;
+            background-size: 25px;
+            width: 60%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+            border-radius: 25px;
+        }
+
+        #SEInput:focus {
+            outline: none
+        }
+
+        #SETable {
+            border-collapse: collapse;
+            width: 85%;
+            border: 1px solid #ddd;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        #SETable th,
+        #SETable td {
+            text-align: left;
+            padding: 12px;
+            text-align: center;
+
+        }
+
+        #SETable tr {
+            border-bottom: 1px solid #ddd;
+
+        }
+
+        #SETable tr.header,
+        #SETable tr:hover {
+            background-color: #f1f1f1;
+
+        }
+
+        a {
+            color: #f56642;
+        }
+
+        h2,
+        h1,
+        p {
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        h1:hover {
+            animation-name: SEshadow;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both;
+            animation-duration: 0.5s;
+            animation-delay: 0.1s;
+        }
+
+        @keyframes SEshadow {
+            from {}
+
+            to {
+                text-shadow: 2px 2px 5px black;
+            }
+        }
+
+        h1 {
+            color: #f56642;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><b>SEER Program</b></h1>
+    <h2>search articles by name, author, and more</h2>
+    <div class="centerenter">
+        <input type="text" id="SEInput" onkeyup="artFunction()" placeholder="name, date, author..." title="Work search">
         <!-- <button type="button" class="cancelbtn">Cancel<a href= "Home.html"_self"> </a></button> -->
         <button class="cancelbtn" onclick="document.location='HomePage.html'">Cancel</button>
-        </div>
-        <div class="tablesearch">
-        <table id="artTable" align="center">
-        <tr class="header">
-        <th style="width:25%">Title</th>
-        <th style="width:25%">Aurthor</th>
-        <th style="width:25%">Source</th>
-        <th style="width:25%">Year</th>
-        </tr>
-        <tr>
-        <td>Most common mistakes in test-driven development practice: Results from an online survey with developers</td>
-        <td>Aniche</td>
-        <td>Article</td>
-        <td>2010</td>
-        </tr>
-        <tr>
-        <td>A prototype empirical evaluation of test driven development - Software Metrics</td>
-        <td>Anonymous</td>
-        <td>Article</td>
-        <td>2001</td>
-        </tr>
-        <tr>
-        <td>Does Test-Driven Development Really Improve Software Design Quality?</td>
-        <td>Janzen and Saiedian</td>
-        <td>Article</td>
-        <td>2008</td>
-        </tr>
-        <tr>
-        <td>An Empirical Assessment on Affective Reactions of Novice Developers when Applying Test-Driven Development</td>
-        <td>Romano, Simone and Fucci, Davide and Baldassarre, Maria Teresa and Caivano, Danilo and Scanniello, Giuseppe</td>
-        <td>Article</td>
-        <td>2019</td>
-        </tr>
-        <tr>
-        <td>Evaluating Test-Driven Development in an Industry-Sponsored Capstone Project</td>
-        <td>Anonymous</td>
-        <td>Proceedings</td>
-        <td>2009</td>
-        </tr>
-        <tr>
-        <td>A Comparative Case Study on the Impact of Test-Driven Development on Program Design and Test Coverage</td>
-        <td>Siniaalto, Maria and Abrahamsson, Pekka</td>
-        <td>Article</td>
-        <td>2017</td>
-        </tr>
-        <tr>
-        <td>Results from a replicated experiment on the affective reactions of novice developers when applying test-driven development</td>
-        <td>Romano, Simone and Scanniello, Giuseppe and Baldassarre, Maria Teresa and Fucci, Davide and Caivano, Danilo</td>
-        <td>Article</td>
-        <td>2020</td>
-        </tr>
-        <tr>
-        <td>On the Influence of Test-Driven Development on Software Design</td>
-        <td>Anonymous</td>
-        <td>Article</td>
-        <td>2006</td>
-        </tr>
-        <tr>
-        <td>A Leveled Examination of Test-Driven Development Acceptance</td>
-        <td>Anonymous</td>
-        <td>Article</td>
-        <td>2007</td>
-        </tr>
-        <tr>
-        <td>Evaluating the Efficacy of Test-Driven Development: Industrial Case Studies</td>
-        <td>Anonymous</td>
-        <td>Article</td>
-        <td>2006</td>
-        </tr>
-        <tr>
-        <td>Productivity of Test Driven Development: A Controlled Experiment with Professionals</td>
-        <td>Canfora, Gerardo and Cimitile, Aniello and Garcia, Felix and Piattini, Mario and Visaggio, and Corrado Aaron</td>
-        <td>Article</td>
-        <td>2006</td>
-        </tr>
-        <tr>
-        <td>Implications of Test-Driven Development A Pilot Study</td>
-        <td>Dell, New</td>
-        <td>Article</td>
-        <td>2003</td>
-        </tr>
-        <tr>
-        <td>Sustainable Test-Driven Development</td>
-        <td>Bain, Scott and Kolsky, Amir</td>
-        <td>Book</td>
-        <td>2016</td>
-        </tr>
-        <tr>
-        <td>Test-driven development as a defect-reduction practice - Software Reliability Engineering</td>
-        <td>Anonymous</td>
-        <td><Article></Article></td>
-        <td>2001</td>
-        </tr>
-        <tr>
-        <td>An Empirical Study of Test-Driven Development vs. Test-Last Development Using Eye Tracking.</td>
-        <td>Choma, Joelma and Guerra, Eduardo M and da Silva, Tiago Silva and Albuquerque, Thomas and Albuquerque, Vanessa G and Zaina, Luciana Martinez</td>
-        <td>Article</td>
-        <td>2019</td>
-        </tr>
-        <tr>
-        <td>On the effectiveness of unit tests in test-driven development.</td>
-        <td>Tosun, Ayse and Ahmed, Muzamil and Turhan, Burak and Juristo, Natalia</td>
-        <td>Article</td>
-        <td>2018</td>
-        </tr>
+    </div>
+    <div class="tablesearch">
+        <table id="SETable" align="center">
+            <tr class="header">
+                <th style="width:25%">Title</th>
+                <th style="width:25%">Aurthor</th>
+                <th style="width:25%">Source</th>
+                <th style="width:25%">Year</th>
+            </tr>
+            <tr>
+                <td><a href="https://ieeexplore.ieee.org/document/5463691">Most common mistakes in test-driven
+                        development practice: Results from an online survey with
+                        developers</a></td>
+                <td>Aniche</td>
+                <td>Article</td>
+                <td>2010</td>
+            </tr>
+            <tr>
+                <td><a href="https://ieeexplore.ieee.org/abstract/document/1357925">A prototype empirical evaluation of
+                        test driven development - Software Metrics</a></td>
+                <td>Anonymous</td>
+                <td>Article</td>
+                <td>2001</td>
+            </tr>
+            <tr>
+                <td><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.304.1723&rep=rep1&type=pdf">Does
+                        Test-Driven Development Really Improve Software Design Quality?</a></td>
+                <td>Janzen and Saiedian</td>
+                <td>Article</td>
+                <td>2008</td>
+            </tr>
+            <tr>
+                <td><a href="https://link.springer.com/chapter/10.1007/978-3-030-35333-9_1">An Empirical Assessment on
+                        Affective Reactions of Novice Developers when Applying Test-Driven
+                        Development</a></td>
+                <td>Romano, Simone and Fucci, Davide and Baldassarre, Maria Teresa and Caivano, Danilo and Scanniello,
+                    Giuseppe</td>
+                <td>Article</td>
+                <td>2019</td>
+            </tr>
+            <tr>
+                <td><a href="https://ieeexplore.ieee.org/document/5070622">Evaluating Test-Driven Development in an
+                        Industry-Sponsored Capstone Project</a></td>
+                <td>Anonymous</td>
+                <td>Proceedings</td>
+                <td>2009</td>
+            </tr>
+            <tr>
+                <td><a href="https://ieeexplore.ieee.org/abstract/document/4343755">A Comparative Case Study on the
+                        Impact of Test-Driven Development on Program Design and Test
+                        Coverage</a></td>
+                <td>Siniaalto, Maria and Abrahamsson, Pekka</td>
+                <td>Article</td>
+                <td>2017</td>
+            </tr>
+            <tr>
+                <td><a href="https://arxiv.org/abs/2004.07524">Results from a replicated experiment on the affective
+                        reactions of novice developers when applying
+                        test-driven development</a></td>
+                <td>Romano, Simone and Scanniello, Giuseppe and Baldassarre, Maria Teresa and Fucci, Davide and Caivano,
+                    Danilo</td>
+                <td>Article</td>
+                <td>2020</td>
+            </tr>
+            <tr>
+                <td><a href="https://ieeexplore.ieee.org/abstract/document/1617340">On the Influence of Test-Driven
+                        Development on Software Design</a></td>
+                <td>Anonymous</td>
+                <td>Article</td>
+                <td>2006</td>
+            </tr>
+            <tr>
+                <td><a
+                        href="https://www.researchgate.net/publication/4251326_A_Leveled_Examination_of_Test-Driven_Development_Acceptance">A
+                        Leveled Examination of Test-Driven Development Acceptance</a></td>
+                <td>Anonymous</td>
+                <td>Article</td>
+                <td>2007</td>
+            </tr>
+            <tr>
+                <td><a href="https://dl.acm.org/doi/abs/10.1145/1159733.1159787">Evaluating the Efficacy of Test-Driven
+                        Development: Industrial Case Studies</a></td>
+                <td>Anonymous</td>
+                <td>Article</td>
+                <td>2006</td>
+            </tr>
+            <tr>
+                <td><a href="https://link.springer.com/chapter/10.1007/11767718_32">Productivity of Test Driven
+                        Development: A Controlled Experiment with Professionals</a></td>
+                <td>Canfora, Gerardo and Cimitile, Aniello and Garcia, Felix and Piattini, Mario and Visaggio, and
+                    Corrado Aaron</td>
+                <td>Article</td>
+                <td>2006</td>
+            </tr>
+            <tr>
+                <td><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.174.8444&rep=rep1&type=pdf">Implications
+                        of Test-Driven Development A Pilot Study</a></td>
+                <td>Dell, New</td>
+                <td>Article</td>
+                <td>2003</td>
+            </tr>
+            <tr>
+                <td><a href="http://www.sustainabletdd.com/">Sustainable Test-Driven Development</a></td>
+                <td>Bain, Scott and Kolsky, Amir</td>
+                <td>Book</td>
+                <td>2016</td>
+            </tr>
+            <tr>
+                <td><a href="https://ieeexplore.ieee.org/document/1251029">Test-driven development as a defect-reduction
+                        practice - Software Reliability Engineering</a></td>
+                <td>Anonymous</td>
+                <td>
+                    <Article></Article>
+                </td>
+                <td>2001</td>
+            </tr>
+            <tr>
+                <td><a
+                        href="https://books.google.co.nz/books?hl=en&lr=&id=PDLDDwAAQBAJ&oi=fnd&pg=PA9&dq=An+Empirical+Study+of+Test-Driven+Development+vs.+Test-Last+Development+Using+Eye+Tracking.&ots=S9fDrfKwLp&sig=6Qas3psU2YY57uIHVaLlVo2FSmQ#v=onepage&q=An%20Empirical%20Study%20of%20Test-Driven%20Development%20vs.%20Test-Last%20Development%20Using%20Eye%20Tracking.&f=false">An
+                        Empirical Study of Test-Driven Development vs. Test-Last Development Using Eye Tracking.</a>
+                </td>
+                <td>Choma, Joelma and Guerra, Eduardo M and da Silva, Tiago Silva and Albuquerque, Thomas and
+                    Albuquerque, Vanessa G and Zaina, Luciana Martinez</td>
+                <td>Article</td>
+                <td>2019</td>
+            </tr>
+            <tr>
+                <td><a
+                        href="https://dl.acm.org/doi/10.1145/3202710.3203153#:~:text=Results%3A%20In%20terms%20of%20mutation,incremental%20test%2Dlast%20development%20task.&text=Professionals%20were%20able%20to%20perform,testing%20with%20test%2Ddriven%20development.">On
+                        the effectiveness of unit tests in test-driven development.</a></td>
+                <td>Tosun, Ayse and Ahmed, Muzamil and Turhan, Burak and Juristo, Natalia</td>
+                <td>Article</td>
+                <td>2018</td>
+            </tr>
         </table>
-        </div>
+    </div>
 
-        <p>this project was created and is maintained by <a href = "https://github.com/CISE2020/ProjectFound">Project Found</a>.&#32;Last updated 30/09/20.</p>
-    <script>function artFunction() {
-          // Declare starting variables
-          var input = document.getElementById("artInput");
-          var filter = input.value.toUpperCase();
-          var table = document.getElementById("artTable");
-          var trs = table.tBodies[0].getElementsByTagName("tr");
-          // Loop through rows
-          for (var i = 0; i < trs.length; i++) {
-            // Define the cells
-            var tds = trs[i].getElementsByTagName("td");
-            // hide the row
-            trs[i].style.display = "none";
-            // loop through row cells
-            for (var i2 = 0; i2 < tds.length; i2++) {
-              // if there's a match
-              if (tds[i2].innerHTML.toUpperCase().indexOf(filter) > -1) {
-                // show the row
-                trs[i].style.display = "";
-                // skip to the next row
-                continue;
-              }
+    <p>this project was created and is maintained by <a href="https://github.com/CISE2020/ProjectFound">Project
+            Found</a>.&#32;Last updated 30/09/20.</p>
+    <script>
+        function artFunction() {
+            // Declare starting variables
+            var input = document.getElementById("SEInput");
+            var filter = input.value.toUpperCase();
+            var table = document.getElementById("SETable");
+            var trs = table.tBodies[0].getElementsByTagName("tr");
+            // Loop through rows
+            for (var i = 0; i < trs.length; i++) {
+                // Define the cells
+                var tds = trs[i].getElementsByTagName("td");
+                // hide the row
+                trs[i].style.display = "none";
+                // loop through row cells
+                for (var i2 = 0; i2 < tds.length; i2++) {
+                    // if there's a match
+                    if (tds[i2].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        // show the row
+                        trs[i].style.display = "";
+                        // skip to the next row
+                        continue;
+                    }
+                }
             }
-          }
+        }
+
+        function addRow() {
+
+            var myTitle = document.getElementById("title");
+            var author = document.getElementById("author(s)");
+            var source = document.getElementById("source");
+            var year = document.getElementById("year");
+            var table = document.getElementById("myTableData");
+
+            var rowCount = table.rows.length;
+            var row = table.insertRow(rowCount);
+
+            row.insertCell(0).innerHTML = '<input type="button" value = "Delete" onClick="Javacsript:deleteRow(this)">';
+            row.insertCell(1).innerHTML = myName.value;
+            row.insertCell(2).innerHTML = age.value;
+
+        }
+
+        function deleteRow(obj) {
+
+            var index = obj.parentNode.parentNode.rowIndex;
+            var table = document.getElementById("myTableData");
+            table.deleteRow(index);
+
         }
     </script>
-    </body>
+</body>
+
 </html>
