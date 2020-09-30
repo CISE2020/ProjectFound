@@ -67,8 +67,6 @@ buildTable(myArray)
     var text = $(this).html()
     text = text.substring(0, text.length - 1);
      
-     
-     
     if (order == 'desc'){
         myArray = myArray.sort((a, b) => a[column] > b[column] ? 1 : -1)
         $(this).data("order","asc");
@@ -90,7 +88,6 @@ $('#search-input').on('keyup',function(){
 })   
 
 buildTable(myArray)
-
    
 function searchTable(value, data) {
     var filteredData = []
