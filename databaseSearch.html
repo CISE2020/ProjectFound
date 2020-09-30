@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>RenArt</title>
+        <link rel="shortcut icon" href="a198cd0c_e2f0_4c99_ba51_342624a24db9_WP4_icon.ico" type="image/x-icon"/>
+        <link href = "https://fonts.googleapis.com/css?family=Nunito+Sans:400,900&display=swap" rel="stylesheet">
+        <style>
+        * {
+          box-sizing: border-box;
+        }
+        body,#artInput{text-align: center;}
+        #artInput {
+          background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/221px-Vector_search_icon.svg.png');
+          background-position: 10px 10px;;
+          background-repeat: no-repeat;
+          background-size: 25px;
+          width: 60%;
+          font-size: 16px;
+          padding: 12px 20px 12px 40px;
+          border: 1px solid #ddd;
+          margin-bottom: 12px;
+          border-radius: 25px;
+        }
+        #artInput:focus {
+          outline:none
+        }
+        #artTable {
+          border-collapse: collapse;
+          width: 85%;
+          border: 1px solid #ddd;
+          font-size: 18px;
+          margin-bottom:40px;
+        }
+        #artTable th, #artTable td {
+          text-align: left;
+          padding: 12px;
+          text-align: center;
+        
+        }
+        #artTable tr {
+          border-bottom: 1px solid #ddd;
+        
+        }
+        #artTable tr.header, #artTable tr:hover {
+          background-color: #f1f1f1;
+        
+        }
+        a {
+          color: #f56642;
+        }
+        
+        h2, h1, p {
+          font-family: 'Nunito Sans', sans-serif;
+        }
+        h1:hover {
+          animation-name: artshadow;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: both;
+          animation-duration: 0.5s;
+          animation-delay: 0.1s;
+        }
+        
+        @keyframes artshadow {
+          from {}
+          to {text-shadow: 2px 2px 5px black;}
+        }
+        h1 {
+          color: #f56642;
+          transition: 0.3s;
+        }
+        </style>
+        </head>
+
+    <body>
+        <h1><a href="https://micahlt.github.io/renart/"><b>SEER Program</b></a></h1>
+        <h2>search articles by name, author, and more</h2>
+        <div class="centerenter">
+        <input type="text" id="artInput" onkeyup="artFunction()" placeholder="name, date, author..." title="Work search">
+        <!-- <button type="button" class="cancelbtn">Cancel<a href= "Home.html"_self"> </a></button> -->
+        <button class="cancelbtn" onclick="document.location='HomePage.html'">Cancel</button>
+        </div>
+        <div class="tablesearch">
+        <table id="artTable" align="center">
+        <tr class="header">
+        <th style="width:25%">Title</th>
+        <th style="width:25%">Aurthor</th>
+        <th style="width:25%">Source</th>
+        <th style="width:25%">Year</th>
+        </tr>
+        <tr>
+        <td>Most common mistakes in test-driven development practice: Results from an online survey with developers</td>
+        <td>Aniche</td>
+        <td>Article</td>
+        <td>2010</td>
+        </tr>
+        <tr>
+        <td>A prototype empirical evaluation of test driven development - Software Metrics</td>
+        <td>Anonymous</td>
+        <td>Article</td>
+        <td>2001</td>
+        </tr>
+        <tr>
+        <td>Does Test-Driven Development Really Improve Software Design Quality?</td>
+        <td>Janzen and Saiedian</td>
+        <td>Article</td>
+        <td>2008</td>
+        </tr>
+        <tr>
+        <td>An Empirical Assessment on Affective Reactions of Novice Developers when Applying Test-Driven Development</td>
+        <td>Romano, Simone and Fucci, Davide and Baldassarre, Maria Teresa and Caivano, Danilo and Scanniello, Giuseppe</td>
+        <td>Article</td>
+        <td>2019</td>
+        </tr>
+        <tr>
+        <td>Evaluating Test-Driven Development in an Industry-Sponsored Capstone Project</td>
+        <td>Anonymous</td>
+        <td>Proceedings</td>
+        <td>2009</td>
+        </tr>
+        <tr>
+        <td>A Comparative Case Study on the Impact of Test-Driven Development on Program Design and Test Coverage</td>
+        <td>Siniaalto, Maria and Abrahamsson, Pekka</td>
+        <td>Article</td>
+        <td>2017</td>
+        </tr>
+        <tr>
+        <td>Results from a replicated experiment on the affective reactions of novice developers when applying test-driven development</td>
+        <td>Romano, Simone and Scanniello, Giuseppe and Baldassarre, Maria Teresa and Fucci, Davide and Caivano, Danilo</td>
+        <td>Article</td>
+        <td>2020</td>
+        </tr>
+        <tr>
+        <td>On the Influence of Test-Driven Development on Software Design</td>
+        <td>Anonymous</td>
+        <td>Article</td>
+        <td>2006</td>
+        </tr>
+        <tr>
+        <td>A Leveled Examination of Test-Driven Development Acceptance</td>
+        <td>Anonymous</td>
+        <td>Article</td>
+        <td>2007</td>
+        </tr>
+        <tr>
+        <td>Evaluating the Efficacy of Test-Driven Development: Industrial Case Studies</td>
+        <td>Anonymous</td>
+        <td>Article</td>
+        <td>2006</td>
+        </tr>
+        <tr>
+        <td>Productivity of Test Driven Development: A Controlled Experiment with Professionals</td>
+        <td>Canfora, Gerardo and Cimitile, Aniello and Garcia, Felix and Piattini, Mario and Visaggio, and Corrado Aaron</td>
+        <td>Article</td>
+        <td>2006</td>
+        </tr>
+        <tr>
+        <td>Implications of Test-Driven Development A Pilot Study</td>
+        <td>Dell, New</td>
+        <td>Article</td>
+        <td>2003</td>
+        </tr>
+        <tr>
+        <td>Sustainable Test-Driven Development</td>
+        <td>Bain, Scott and Kolsky, Amir</td>
+        <td>Book</td>
+        <td>2016</td>
+        </tr>
+        <tr>
+        <td>Test-driven development as a defect-reduction practice - Software Reliability Engineering</td>
+        <td>Anonymous</td>
+        <td><Article></Article></td>
+        <td>2001</td>
+        </tr>
+        <tr>
+        <td>An Empirical Study of Test-Driven Development vs. Test-Last Development Using Eye Tracking.</td>
+        <td>Choma, Joelma and Guerra, Eduardo M and da Silva, Tiago Silva and Albuquerque, Thomas and Albuquerque, Vanessa G and Zaina, Luciana Martinez</td>
+        <td>Article</td>
+        <td>2019</td>
+        </tr>
+        <tr>
+        <td>On the effectiveness of unit tests in test-driven development.</td>
+        <td>Tosun, Ayse and Ahmed, Muzamil and Turhan, Burak and Juristo, Natalia</td>
+        <td>Article</td>
+        <td>2018</td>
+        </tr>
+        </table>
+        </div>
+
+        <p>this project was created and is maintained by <a href = "https://github.com/CISE2020/ProjectFound">Project Found</a>.&#32;Last updated 30/09/20.</p>
+    <script>function artFunction() {
+          // Declare starting variables
+          var input = document.getElementById("artInput");
+          var filter = input.value.toUpperCase();
+          var table = document.getElementById("artTable");
+          var trs = table.tBodies[0].getElementsByTagName("tr");
+          // Loop through rows
+          for (var i = 0; i < trs.length; i++) {
+            // Define the cells
+            var tds = trs[i].getElementsByTagName("td");
+            // hide the row
+            trs[i].style.display = "none";
+            // loop through row cells
+            for (var i2 = 0; i2 < tds.length; i2++) {
+              // if there's a match
+              if (tds[i2].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                // show the row
+                trs[i].style.display = "";
+                // skip to the next row
+                continue;
+              }
+            }
+          }
+        }
+    </script>
+    </body>
+</html>
