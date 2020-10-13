@@ -98,19 +98,28 @@
 
 <body>
     <h1><b>SEER Program</b></h1>
-    <h2>search articles by name, author, and more</h2>
+    <h2>Search for articles by name, author, and more!</h2>
     <div class="centerenter">
         <input type="text" id="SEInput" onkeyup="artFunction()" placeholder="name, date, author..." title="Work search">
         <!-- <button type="button" class="cancelbtn">Cancel<a href= "Home.html"_self"> </a></button> -->
         <button class="cancelbtn" onclick="document.location='HomePage.html'">Cancel</button>
     </div>
+
+    <div class="dateDropdown">
+        <div id="myDropdown" class="dropdown-content">
+          <input type="text" placeholder="date" id="myInput" onkeyup="filterFunction()">
+        </div>
+        <button onclick="myFunction()" class="dropbtn">Filter Dates</button>
+      </div>
+
+
     <div class="tablesearch">
         <table id="SETable" align="center">
             <tr class="header">
                 <th style="width:25%">Title</th>
-                <th style="width:25%">Aurthor</th>
+                <th style="width:25%">Author</th>
                 <th style="width:25%">Source</th>
-                <th style="width:25%">Year</th>
+                <th style="width:25%">Year Published</th>
             </tr>
             <tr>
                 <td><a href="https://ieeexplore.ieee.org/document/5463691">Most common mistakes in test-driven
