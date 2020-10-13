@@ -18,7 +18,6 @@
         #SEInput {
             text-align: center;
         }
-
         #SEInput {
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/221px-Vector_search_icon.svg.png');
             background-position: 10px 10px;
@@ -277,8 +276,20 @@
         </table>
     </div>
 
+    <script>
+        function getDate(){
+        n =  new Date();
+        y = n.getFullYear();
+        m = n.getMonth() + 1;
+        d = n.getDate();
+        document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+    }
+    </script>
+
     <p>This project was created and is maintained by <a href="https://github.com/CISE2020/ProjectFound">Project
-            Found</a>.&#32;Last updated 30/09/20.</p>
+            Found</a>.&#32;</p>
+    <p>Last updated on <script> document.write(new Date().toLocaleDateString()); </script>.</p>
+
     <script>
         function titleFunction() {
             // Declare starting variables
