@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -11,5 +12,8 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^8.1.1"
+  },
+  "engines": {
+    "node": "v14.8.0"
   }
 }
