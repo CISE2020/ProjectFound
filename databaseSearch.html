@@ -141,16 +141,11 @@
         <h2>Search for articles by name, author, and more!</h2>
         
         <div class="centerenter">
-            <input type="text" id="SETitleInput" onkeyup="titleFunction()" placeholder="Search for article title"
+            <input type="text" id="SEInput" onkeyup="searchFunction()" placeholder="Search for article by name, author, year..."
                 title="Work search">
+            <button class="cancelbtn" onclick="document.location='HomePage.html'">Cancel</button>
         </div>
-
-        <div class="centerenter">
-            <input type="text" id="SEAuthorInput" onkeyup="authorFunction()" placeholder="Search for article author"
-                title="Work search">
-        </div>
-    
-        <button class="cancelbtn" onclick="document.location='HomePage.html'">Cancel</button>
+        
 
     <div class="tablesearch">
         <table id="SETable" align="center">
@@ -311,12 +306,13 @@
     </script>
 
     <script>
-        function titleFunction() {
+        function searchFunction() {
             // Declare starting variables
-            var input = document.getElementById("SETitleInput");
+            var input = document.getElementById("SEInput");
             var filter = input.value.toUpperCase();
             var table = document.getElementById("SETable");
             var trs = table.tBodies[0].getElementsByTagName("tr");
+            
             // Loop through rows
             for (var i = 0; i < trs.length; i++) {
                 // Define the cells
@@ -336,31 +332,6 @@
                 }
             }
         }
-
-        // function authorFunction() {
-        //     // Declare starting variables
-        //     var input = document.getElementById("SEAuthorInput");
-        //     var filter = input.value.toUpperCase();
-        //     var table = document.getElementById("SETable");
-        //     var trs = table.tBodies[0].getElementsByTagName("tr");
-        //     // Loop through rows
-        //     for (var i = 0; i < trs.length; i++) {
-        //         // Define the cells
-        //         var tds = trs[i].getElementsByTagName("td");
-        //         // hide the row
-        //         trs[i].style.display = "none";
-        //         // loop through row cells
-        //         for (var i2 = 0; i2 < tds.length; i2++) {
-        //             // if there's a match
-        //             if (tds[i2].innerHTML.toUpperCase().indexOf(filter) > -1) {
-        //                 // show the row
-        //                 trs[i].style.display = "";
-        //                 // skip to the next row
-        //                 continue;
-        //             }
-        //         }
-        //     }
-        // }
 
         function addRow() {
             var myTitle = document.getElementById("title");
