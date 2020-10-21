@@ -1,1 +1,1 @@
-web: node HomePage.html
+web: node index.js
