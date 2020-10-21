@@ -19,6 +19,11 @@
         padding: 10px 18px; 
         background-color: #f44336; 
         } 
+
+    
+    .buildTable {
+
+    }
     /*set a style for the buttons*/ 
           
     button { 
@@ -41,7 +46,6 @@
         <th  class="bg-info" data-colname="name" data-order="desc">Name &#9650</th>
         <th  data-colname="age" data-order="desc">Age &#9650</th>
         <th  data-colname="birthdate" data-order="desc">Birthday &#9650</th>
-        <th  data-colname="account" data-order="desc">Account Type</th>
     </tr>
     <tbody id="myTable">
         
@@ -109,12 +113,10 @@ function buildTable(data){
         var colname = `name-${i}`
         var colage = `age-${i}`
         var colbirth = `birth-${i}`
-        var colaccount = `account-${i}`
         var row = `<tr>
                         <td>${data[i].name}</td>
                         <td>${data[i].age}</td>
                         <td>${data[i].birthdate}</td>
-                        <td>${data[i].account}</td>
                    </tr>`
         table.innerHTML += row
     }
