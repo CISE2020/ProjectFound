@@ -1,7 +1,6 @@
 {
   "name": "test",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "test": "make test",
     "start": "index.js"
@@ -17,7 +16,9 @@
     "node": "v14.8.0",
     "npm": "6.14.7"
   },
-  "dependencies": {},
+  "dependencies": {
+    "express": "4.17.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CISE2020/ProjectFound.git"

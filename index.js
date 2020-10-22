@@ -1,6 +1,8 @@
-var PORT = process.env.PORT || 5000;
+import express from 'express';
+
+const PORT = process.env.PORT || 5000;
 var express = require('express');
-var app = express();
+const app = express();
 
 var http = require('http');
 var server = http.Server(app);
