@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <img src="images/SERL.png" alt="">
-        <title>SEER Program</title>
+    <img src="images/SERL.png" alt="">
+    <title>SEER Program</title>
     <link rel="shortcut icon" href="a198cd0c_e2f0_4c99_ba51_342624a24db9_WP4_icon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,900&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
         }
+
         body,
         #SEInput {
             text-align: center;
         }
+
         #SEInput {
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/221px-Vector_search_icon.svg.png');
             background-position: 10px 10px;
@@ -30,9 +32,11 @@
             margin-bottom: 12px;
             border-radius: 25px;
         }
+
         #SEInput:focus {
             outline: none
         }
+
         #SETable {
             border-collapse: collapse;
             width: 85%;
@@ -40,27 +44,33 @@
             font-size: 18px;
             margin-bottom: 40px;
         }
+
         #SETable th,
         #SETable td {
             text-align: left;
             padding: 12px;
             text-align: center;
         }
+
         #SETable tr {
             border-bottom: 1px solid #ddd;
         }
+
         #SETable tr.header,
         #SETable tr:hover {
             background-color: #f1f1f1;
         }
+
         a {
             color: #f56642;
         }
+
         h2,
         h1,
         p {
             font-family: 'Nunito Sans', sans-serif;
         }
+
         h1:hover {
             animation-name: SEshadow;
             animation-timing-function: ease-in-out;
@@ -68,6 +78,7 @@
             animation-duration: 0.5s;
             animation-delay: 0.1s;
         }
+
         @keyframes SEshadow {
             from {}
 
@@ -80,221 +91,253 @@
             color: #f56642;
             transition: 0.3s;
         }
-.dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-.dropdown-content {
-  display: none;
-  position:relative;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-.dropdown a:hover {background-color: #ddd;}
-.show {display: block;}
 
-.gobackbtn {
+        .dropbtn {
+            background-color: #3498DB;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropbtn:hover,
+        .dropbtn:focus {
+            background-color: #2980B9;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: relative;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {
+            background-color: #ddd;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .gobackbtn {
             margin-left: 40px;
         }
 
-.menubtn {
+        .menubtn {
             margin: 20px;
         }
 
-/* database web page layout */
+        /* database web page layout */
     </style>
-    </head>
-    <body>
-        <h1><b>SEER Program</b></h1>
-        <button class="menubtn" onclick="document.location='SubmitArticle.html'">Submit New Article(s)</button>
-        <button class="menubtn">My Article(s)</button>
+</head>
 
-        <h2>Search for articles by name, author, and more!</h2>
-        
-        <div class="centerenter">
-            <input type="text" id="SEInput" onkeyup="searchFunction()" placeholder="Search for article by name, author, year..."
-                title="Work search">
-            <button class="gobackbtn" onclick="document.location='DemoPage.html'">Go Back</button>
+<body>
+    <h1><b>SEER Program</b></h1>
+    <button class="menubtn" onclick="document.location='SubmitArticle.html'">Submit New Article(s)</button>
+    <button class="menubtn">My Article(s)</button>
 
-        </div>
-        
+    <h2>Search for articles by name, author, and more!</h2>
 
-        <div class="tablesearch">
-            <table id="SETable" align="center">
-                <tr class="header">
-                    <th style="width:25%">Title</th>
-                    <th style="width:25%">Author(s)</th>
-                    <th style="width:25%">Source Type</th>
-                    <th style="width:25%">Rating</th>
-                    <th style="width:25%">Publication Date</th>
-                </tr>
-                <tr>
-                    <td id="title"><a href="https://ieeexplore.ieee.org/document/5463691">Most common mistakes in test-driven
-                            development practice: Results from an online survey with
-                            developers</a></td>
-                    <td id="author">Aniche</td>
-                    <td id="type">Article</td>
-                    <td id="rating">2/5</td>
-                    <td id="date">2010</td>
-                </tr>
-                <tr>
-                    <td id="title"><a href="https://ieeexplore.ieee.org/abstract/document/1357925">A prototype empirical evaluation of
-                            test driven development - Software Metrics</a></td>
-                    <td id="author">Anonymous</td>
-                    <td id="type">Article</td>
-                    <td id="rating">3/5</td>
-                    <td id="date">2001</td>
-                </tr>
-                <tr>
-                    <td id="title"><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.304.1723&rep=rep1&type=pdf">Does
-                            Test-Driven Development Really Improve Software Design Quality?</a></td>
-                    <td id="author">Janzen and Saiedian</td>
-                    <td id="type">Article</td>
-                    <td id="rating">4/5</td>
-                    <td id="date">2008</td>
-                </tr>
-                <tr>
-                    <td id="title"><a href="https://link.springer.com/chapter/10.1007/978-3-030-35333-9_1">An Empirical Assessment on
-                            Affective Reactions of Novice Developers when Applying Test-Driven
-                            Development</a></td>
-                    <td id="author">Romano, Simone and Fucci, Davide and Baldassarre, Maria Teresa and Caivano, Danilo and Scanniello,
-                        Giuseppe</td>
-                    <td id="type">Article</td>
-                    <td id="rating">4/5</td>
-                    <td id="date">2019</td>
-                </tr>
-                <tr>
-                    <td id="title"><a href="https://ieeexplore.ieee.org/document/5070622">Evaluating Test-Driven Development in an
-                            Industry-Sponsored Capstone Project</a></td>
-                    <td id="author">Anonymous</td>
-                    <td id="type">Proceedings</td>
-                    <td id="rating">5/5</td>
-                    <td id="date">2009</td> 
-                </tr>
-                <tr>
-                    <td id="title"><a href="https://ieeexplore.ieee.org/abstract/document/4343755">A Comparative Case Study on the
-                            Impact of Test-Driven Development on Program Design and Test
-                            Coverage</a></td>
-                    <td id="author">Siniaalto, Maria and Abrahamsson, Pekka</td>
-                    <td id="type">Article</td>
-                    <td id="rating">No Rating</td>
-                    <td id="date">2017</td>
-                </tr>
-                <tr>
-                    <td id="title"><a href="https://arxiv.org/abs/2004.07524">Results from a replicated experiment on the affective
-                            reactions of novice developers when applying
-                            test-driven development</a></td>
-                    <td id="author">Romano, Simone and Scanniello, Giuseppe and Baldassarre, Maria Teresa and Fucci, Davide and Caivano,
-                        Danilo</td>
-                    <td id="type">Article</td>
-                    <td id="rating">No Rating</td>
-                    <td id="date">2020</td>
-                </tr>
-                <tr>
-                    <td id="title"><a href="https://ieeexplore.ieee.org/abstract/document/1617340">On the Influence of Test-Driven
-                            Development on Software Design</a></td>
-                    <td id="author">Anonymous</td>
-                    <td id="type">Article</td>
-                    <td id="rating">5/5</td>
-                    <td id="date">2006</td>
-                </tr>
-                <tr>
-                    <td id="title"><a href="https://www.researchgate.net/publication/4251326_A_Leveled_Examination_of_Test-Driven_Development_Acceptance">A
-                            Leveled Examination of Test-Driven Development Acceptance</a></td>
-                    <td id="author">Anonymous</td>
-                    <td id="type">Article</td>
-                    <td id="rating">4/5</td>
-                    <td id="date">2007</td>
-                </tr>
-                <tr>
-                    <td id="title"><a href="https://dl.acm.org/doi/abs/10.1145/1159733.1159787">Evaluating the Efficacy of Test-Driven
-                            Development: Industrial Case Studies</a></td>
-                    <td id="author">Anonymous</td>
-                    <td id="type">Article</td>
-                    <td id="rating">1/5</td>
-                    <td id="date">2006</td>
-                </tr>
-                <tr>
-                    <td id="title"><a href="https://link.springer.com/chapter/10.1007/11767718_32">Productivity of Test Driven
-                            Development: A Controlled Experiment with Professionals</a></td>
-                    <td id="author">Canfora, Gerardo and Cimitile, Aniello and Garcia, Felix and Piattini, Mario and Visaggio, and
-                        Corrado Aaron</td>
-                    <td id="type">Article</td>
-                    <td id="rating">2/5</td>
-                    <td id="date">2006</td>
-                </tr>
-                <tr>
-                    <td id="title"><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.174.8444&rep=rep1&type=pdf">Implications
-                            of Test-Driven Development A Pilot Study</a></td>
-                    <td id="author">Dell, New</td>
-                    <td id="type">Article</td>
-                    <td id="rating">2/5</td>
-                    <td id="date">2003</td>
-                </tr>
-                <tr>
-                    <td id="title"><a href="http://www.sustainabletdd.com/">Sustainable Test-Driven Development</a></td>
-                    <td id="author">Bain, Scott and Kolsky, Amir</td>
-                    <td id="type">Book</td>
-                    <td id="rating">5/5</td>
-                    <td id="date">2016</td>
-                </tr>
-                <tr>
-                    <td id="title"><a href="https://ieeexplore.ieee.org/document/1251029">Test-driven development as a defect-reduction
-                            practice - Software Reliability Engineering</a></td>
-                    <td id="author">Anonymous</td>
-                    <td id="type">Article</td>
-                    <td id="rating">No Rating</td>
-                    <td id="date">2001</td>
-                </tr>
-                <tr>
-                    <td id="title"><a href="https://books.google.co.nz/books?hl=en&lr=&id=PDLDDwAAQBAJ&oi=fnd&pg=PA9&dq=An+Empirical+Study+of+Test-Driven+Development+vs.+Test-Last+Development+Using+Eye+Tracking.&ots=S9fDrfKwLp&sig=6Qas3psU2YY57uIHVaLlVo2FSmQ#v=onepage&q=An%20Empirical%20Study%20of%20Test-Driven%20Development%20vs.%20Test-Last%20Development%20Using%20Eye%20Tracking.&f=false">An
-                            Empirical Study of Test-Driven Development vs. Test-Last Development Using Eye Tracking.</a>
-                    </td>
-                    <td id="author">Choma, Joelma and Guerra, Eduardo M and da Silva, Tiago Silva and Albuquerque, Thomas and
-                        Albuquerque, Vanessa G and Zaina, Luciana Martinez</td>
-                    <td id="type">Article</td>
-                    <td id="rating">5/5</td>
-                    <td id="date">2019</td>
-                </tr>
-                <tr>
-                    <td id="title"><a href="https://dl.acm.org/doi/10.1145/3202710.3203153#:~:text=Results%3A%20In%20terms%20of%20mutation,incremental%20test%2Dlast%20development%20task.&text=Professionals%20were%20able%20to%20perform,testing%20with%20test%2Ddriven%20development.">On
-                            the effectiveness of unit tests in test-driven development.</a></td>
-                    <td id="author">Tosun, Ayse and Ahmed, Muzamil and Turhan, Burak and Juristo, Natalia</td>
-                    <td id="type">Article</td>
-                    <td id="rating">4/5</td>
-                    <td id="date">2018</td>
-                </tr>
-            </table>
-        </div>
+    <div class="centerenter">
+        <input type="text" id="SEInput" onkeyup="searchFunction()"
+            placeholder="Search for article by name, author, year..." title="Work search">
+        <button class="gobackbtn" onclick="document.location='DemoPage.html'">Go Back</button>
+
+    </div>
+
+
+    <div class="tablesearch">
+        <table id="SETable" align="center">
+            <tr class="header">
+                <th style="width:25%">Title</th>
+                <th style="width:25%">Author(s)</th>
+                <th style="width:25%">Source Type</th>
+                <th style="width:25%">Rating</th>
+                <th style="width:25%">Publication Date</th>
+            </tr>
+            <tr>
+                <td id="title"><a href="https://ieeexplore.ieee.org/document/5463691">Most common mistakes in
+                        test-driven
+                        development practice: Results from an online survey with
+                        developers</a></td>
+                <td id="author">Aniche</td>
+                <td id="type">Article</td>
+                <td id="rating">2/5</td>
+                <td id="date">2010</td>
+            </tr>
+            <tr>
+                <td id="title"><a href="https://ieeexplore.ieee.org/abstract/document/1357925">A prototype empirical
+                        evaluation of
+                        test driven development - Software Metrics</a></td>
+                <td id="author">Anonymous</td>
+                <td id="type">Article</td>
+                <td id="rating">3/5</td>
+                <td id="date">2001</td>
+            </tr>
+            <tr>
+                <td id="title"><a
+                        href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.304.1723&rep=rep1&type=pdf">Does
+                        Test-Driven Development Really Improve Software Design Quality?</a></td>
+                <td id="author">Janzen and Saiedian</td>
+                <td id="type">Article</td>
+                <td id="rating">4/5</td>
+                <td id="date">2008</td>
+            </tr>
+            <tr>
+                <td id="title"><a href="https://link.springer.com/chapter/10.1007/978-3-030-35333-9_1">An Empirical
+                        Assessment on
+                        Affective Reactions of Novice Developers when Applying Test-Driven
+                        Development</a></td>
+                <td id="author">Romano, Simone and Fucci, Davide and Baldassarre, Maria Teresa and Caivano, Danilo and
+                    Scanniello,
+                    Giuseppe</td>
+                <td id="type">Article</td>
+                <td id="rating">4/5</td>
+                <td id="date">2019</td>
+            </tr>
+            <tr>
+                <td id="title"><a href="https://ieeexplore.ieee.org/document/5070622">Evaluating Test-Driven Development
+                        in an
+                        Industry-Sponsored Capstone Project</a></td>
+                <td id="author">Anonymous</td>
+                <td id="type">Proceedings</td>
+                <td id="rating">5/5</td>
+                <td id="date">2009</td>
+            </tr>
+            <tr>
+                <td id="title"><a href="https://ieeexplore.ieee.org/abstract/document/4343755">A Comparative Case Study
+                        on the
+                        Impact of Test-Driven Development on Program Design and Test
+                        Coverage</a></td>
+                <td id="author">Siniaalto, Maria and Abrahamsson, Pekka</td>
+                <td id="type">Article</td>
+                <td id="rating">No Rating</td>
+                <td id="date">2017</td>
+            </tr>
+            <tr>
+                <td id="title"><a href="https://arxiv.org/abs/2004.07524">Results from a replicated experiment on the
+                        affective
+                        reactions of novice developers when applying
+                        test-driven development</a></td>
+                <td id="author">Romano, Simone and Scanniello, Giuseppe and Baldassarre, Maria Teresa and Fucci, Davide
+                    and Caivano,
+                    Danilo</td>
+                <td id="type">Article</td>
+                <td id="rating">No Rating</td>
+                <td id="date">2020</td>
+            </tr>
+            <tr>
+                <td id="title"><a href="https://ieeexplore.ieee.org/abstract/document/1617340">On the Influence of
+                        Test-Driven
+                        Development on Software Design</a></td>
+                <td id="author">Anonymous</td>
+                <td id="type">Article</td>
+                <td id="rating">5/5</td>
+                <td id="date">2006</td>
+            </tr>
+            <tr>
+                <td id="title"><a
+                        href="https://www.researchgate.net/publication/4251326_A_Leveled_Examination_of_Test-Driven_Development_Acceptance">A
+                        Leveled Examination of Test-Driven Development Acceptance</a></td>
+                <td id="author">Anonymous</td>
+                <td id="type">Article</td>
+                <td id="rating">4/5</td>
+                <td id="date">2007</td>
+            </tr>
+            <tr>
+                <td id="title"><a href="https://dl.acm.org/doi/abs/10.1145/1159733.1159787">Evaluating the Efficacy of
+                        Test-Driven
+                        Development: Industrial Case Studies</a></td>
+                <td id="author">Anonymous</td>
+                <td id="type">Article</td>
+                <td id="rating">1/5</td>
+                <td id="date">2006</td>
+            </tr>
+            <tr>
+                <td id="title"><a href="https://link.springer.com/chapter/10.1007/11767718_32">Productivity of Test
+                        Driven
+                        Development: A Controlled Experiment with Professionals</a></td>
+                <td id="author">Canfora, Gerardo and Cimitile, Aniello and Garcia, Felix and Piattini, Mario and
+                    Visaggio, and
+                    Corrado Aaron</td>
+                <td id="type">Article</td>
+                <td id="rating">2/5</td>
+                <td id="date">2006</td>
+            </tr>
+            <tr>
+                <td id="title"><a
+                        href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.174.8444&rep=rep1&type=pdf">Implications
+                        of Test-Driven Development A Pilot Study</a></td>
+                <td id="author">Dell, New</td>
+                <td id="type">Article</td>
+                <td id="rating">2/5</td>
+                <td id="date">2003</td>
+            </tr>
+            <tr>
+                <td id="title"><a href="http://www.sustainabletdd.com/">Sustainable Test-Driven Development</a></td>
+                <td id="author">Bain, Scott and Kolsky, Amir</td>
+                <td id="type">Book</td>
+                <td id="rating">5/5</td>
+                <td id="date">2016</td>
+            </tr>
+            <tr>
+                <td id="title"><a href="https://ieeexplore.ieee.org/document/1251029">Test-driven development as a
+                        defect-reduction
+                        practice - Software Reliability Engineering</a></td>
+                <td id="author">Anonymous</td>
+                <td id="type">Article</td>
+                <td id="rating">No Rating</td>
+                <td id="date">2001</td>
+            </tr>
+            <tr>
+                <td id="title"><a
+                        href="https://books.google.co.nz/books?hl=en&lr=&id=PDLDDwAAQBAJ&oi=fnd&pg=PA9&dq=An+Empirical+Study+of+Test-Driven+Development+vs.+Test-Last+Development+Using+Eye+Tracking.&ots=S9fDrfKwLp&sig=6Qas3psU2YY57uIHVaLlVo2FSmQ#v=onepage&q=An%20Empirical%20Study%20of%20Test-Driven%20Development%20vs.%20Test-Last%20Development%20Using%20Eye%20Tracking.&f=false">An
+                        Empirical Study of Test-Driven Development vs. Test-Last Development Using Eye Tracking.</a>
+                </td>
+                <td id="author">Choma, Joelma and Guerra, Eduardo M and da Silva, Tiago Silva and Albuquerque, Thomas
+                    and
+                    Albuquerque, Vanessa G and Zaina, Luciana Martinez</td>
+                <td id="type">Article</td>
+                <td id="rating">5/5</td>
+                <td id="date">2019</td>
+            </tr>
+            <tr>
+                <td id="title"><a
+                        href="https://dl.acm.org/doi/10.1145/3202710.3203153#:~:text=Results%3A%20In%20terms%20of%20mutation,incremental%20test%2Dlast%20development%20task.&text=Professionals%20were%20able%20to%20perform,testing%20with%20test%2Ddriven%20development.">On
+                        the effectiveness of unit tests in test-driven development.</a></td>
+                <td id="author">Tosun, Ayse and Ahmed, Muzamil and Turhan, Burak and Juristo, Natalia</td>
+                <td id="type">Article</td>
+                <td id="rating">4/5</td>
+                <td id="date">2018</td>
+            </tr>
+        </table>
+    </div>
 
     <script>
-        function getDate(){
-        n =  new Date();
-        y = n.getFullYear();
-        m = n.getMonth() + 1;
-        d = n.getDate();
-        document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
-    }
+        function getDate() {
+            n = new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate();
+            document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+        }
     </script>
 
     <script>
@@ -304,7 +347,7 @@
             var filter = input.value.toUpperCase();
             var table = document.getElementById("SETable");
             var trs = table.tBodies[0].getElementsByTagName("tr");
-            
+
             // Loop through rows
             for (var i = 0; i < trs.length; i++) {
                 // Define the cells
@@ -312,15 +355,15 @@
                 // hide the row
                 trs[i].style.display = "none";
                 // loop through row cells
-                for (var i2 = 0; i2 < tds.length; i2++){
+                for (var i2 = 0; i2 < tds.length; i2++) {
                     // if there's a match
-                        if (tds[i2].innerHTML.toUpperCase().indexOf(filter) > -1){
+                    if (tds[i2].innerHTML.toUpperCase().indexOf(filter) > -1) {
                         // show the row
                         trs[i].style.display = "";
                         // skip to the next row
                         continue;
                     }
-                    
+
                 }
             }
         }
@@ -346,12 +389,13 @@
             var table = document.getElementById("myTableData");
             table.deleteRow(index);
         }
-        
+
     </script>
 
-<p>This project was created and is maintained by <a href="https://github.com/CISE2020/ProjectFound">Project
-    Found</a>.&#32;</p>
-<p>Last updated on <script> document.write(new Date().toLocaleDateString()); </script>.</p>
+    <p>This project was created and is maintained by <a href="https://github.com/CISE2020/ProjectFound">Project
+            Found</a>.&#32;</p>
+    <p>Last updated on
+        <script> document.write(new Date().toLocaleDateString()); </script>.</p>
 
 </body>
 
