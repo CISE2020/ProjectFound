@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test":"make test",
     "start": "index.js"
   },
   "author": "",
@@ -13,7 +13,8 @@
     "chai": "^4.2.0",
     "mocha": "^8.1.1"
   },
-  "engines": {
-    "node": "v14.8.0"
+  "engine": {
+    "node": "v14.8.0",
+    "npm": "6.14.7"
   }
 }
