@@ -5,11 +5,32 @@
     th{
         cursor: pointer;
         color:#fff;
+
         background-color: #e24b05;
             }
     table{
         text-align: center;
     }
+
+    /*set extra style for the cancel button*/              
+    .cancelbtn { 
+        width: auto; 
+        padding: 10px 18px; 
+        margin-left: 40px;
+        } 
+
+
+    
+    /*set a style for the buttons*/   
+    button { 
+        background-color: #e24b05; 
+        color: white; 
+        padding: 14px 20px; 
+        margin: 8px 0; 
+        border: none; 
+        cursor: pointer; 
+        width: 100%; 
+        }
 </style>
 
 <table class="table table-striped">
@@ -17,24 +38,25 @@
         <th  class="bg-info" data-colname="name" data-order="desc">Name &#9650</th>
         <th  data-colname="age" data-order="desc">Age &#9650</th>
         <th  data-colname="birthdate" data-order="desc">Birthday &#9650</th>
+        <th  data-colname="account" data-order="desc">Account Type &#9650</th>
     </tr>
     <tbody id="myTable"> 
     </tbody>
 </table>
 
-<div class="container" style="background-color:#f1f1f1"> 
-    <!-- <button type="button" class="cancelbtn">Cancel<a href= "Home.html"_self"> </a></button> -->
-     <button class="cancelbtn" onclick="document.location='HomePage.html'">Cancel</button>
- </div> 
+     <button class="cancelbtn" onclick="document.location='AdminHomePage.html'">Cancel</button>
 
 <script>
 var myArray = [
-    {'name':' Michael', 'age':'30', 'birthdate':'11/10/1989'},
-    {'name':' Mila', 'age':'32', 'birthdate':'10/1/1989'},
-    {'name':' Paul', 'age':'29', 'birthdate':'10/14/1990'},
-    {'name':' Dennis', 'age':'25', 'birthdate':'11/29/1993'},
-    {'name':' Tim', 'age':'27', 'birthdate':'3/12/1991'},
-    {'name':' Erik', 'age':'24', 'birthdate':'10/31/1995'},
+    {'name':' Michael', 'age':'30', 'birthdate':'11/10/1989', 'account':'Submitter'},
+    {'name':' Mila', 'age':'32', 'birthdate':'10/01/1989','account':'Analyst'},
+    {'name':' Paul', 'age':'29', 'birthdate':'10/14/1990','account':'Admin'},
+    {'name':' Dennis', 'age':'25', 'birthdate':'11/29/19,93','account':'Submitter'},
+    {'name':' Tim', 'age':'27', 'birthdate':'3/12/1991','account':'Moderator'},
+    {'name':' Erik', 'age':'24', 'birthdate':'10/31/1995','account':'Analyst'},
+    {'name':' Daniel', 'age':'21', 'birthdate':'02/02/1991','account':'Moderator'},
+    {'name':' Mark', 'age':'28', 'birthdate':'11/12/1996','account':'Submitter'},
+    {'name':' Fiona', 'age':'19', 'birthdate':'09/26/1992','account':'Moderator'},
 ]
 
 buildTable(myArray)
@@ -66,14 +88,15 @@ function buildTable(data){
         var colname = `name-${i}`
         var colage = `age-${i}`
         var colbirth = `birth-${i}`
+        var colacctype = `account-${i}`
 
         var row = `<tr>
                         <td>${data[i].name}</td>
                         <td>${data[i].age}</td>
                         <td>${data[i].birthdate}</td>
+                        <td>${data[i].account}</td>
                    </tr>`
         table.innerHTML += row
     }
 }
-
 </script>
