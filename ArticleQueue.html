@@ -5,8 +5,57 @@
     <title>Article Queue</title>
 </head>
 
+<style>
+    tr:hover { background: grey;
+    cursor:pointer; }
+
+    table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+
 <body>
     <h2> Article Queue(s)</h2>
     
+    <table style="width:100%">
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Source Type</th>
+          <th>Publication Date</th>
+        </tr>
+
+        <tr>
+          <td>Most common mistakes in test-driven
+            development practice: Results from an online survey with
+            developers</td>
+          <td>Aniche</td>
+          <td>Article</td>
+          <td>2010</td>
+        </tr>
+
+        <tr>
+          <td>A prototype empirical evaluation of
+            test driven development - 
+            Software Metrics</td>
+          <td>Anonymous</td>
+          <td>Article</td>
+          <td>2001</td>
+        </tr>
+    </table>
+
+    <div class="container" style="background-color:#f1f1f1"> 
+        <!-- <button type="button" class="cancelbtn">Cancel<a href= "Home.html"_self"> </a></button> -->
+        <button class="cancelbtn" onclick="document.location='ModeratorHomePage.html'">Cancel</button>
+        <button onclick="document.location='HomePage.html'">Accept</button>
+        <button onclick="document.location='HomePage.html'">Reject</button>
+    </div> 
+
 </body>
 </html>
