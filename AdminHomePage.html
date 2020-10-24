@@ -2,11 +2,11 @@
 <html>
 
 <head>
+
+    <!-- automatic style reference sheet links -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <img src="images/SERL.png" alt="">
-    <title>SEER Program</title>
     <link rel="shortcut icon" href="a198cd0c_e2f0_4c99_ba51_342624a24db9_WP4_icon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,900&display=swap" rel="stylesheet">
     <style>
@@ -15,6 +15,7 @@
         }
 
         body,
+        /* formatting for database search bar */
         #SEInput {
             text-align: center;
         }
@@ -37,6 +38,7 @@
             outline: none
         }
 
+        /* formatting for the database result table */
         #SETable {
             border-collapse: collapse;
             width: 85%;
@@ -92,54 +94,12 @@
             transition: 0.3s;
         }
 
-        .dropbtn {
-            background-color: #3498DB;
-            color: white;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
-
-        .dropbtn:hover,
-        .dropbtn:focus {
-            background-color: #2980B9;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: relative;
-            background-color: #f1f1f1;
-            min-width: 160px;
-            overflow: auto;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown a:hover {
-            background-color: #ddd;
-        }
-
-        .show {
-            display: block;
-        }
-
+        /* formatting for the manage accounts button */
         .manageaccounts {
             margin: 20px;
         }
 
+        /* formatting for the go back button */
         .gobackbtn {
             margin-left: 40px;
         }
@@ -149,18 +109,24 @@
 </head>
 
 <body>
+    <!-- image and title header at top of page -->
+    <img src="images/SERL.png" alt="">
     <h1><b>SEER Program</b></h1>
+
+    <!-- initialises the manage accounts button -->
     <button class="manageaccounts" onclick="document.location='Search.html'">Manage Accounts</button>
     <h2>Search for articles by name, author, and more!</h2>
 
+    <!-- initialises the search bar -->
     <div class="centerenter">
         <input type="text" id="SEInput" onkeyup="searchFunction()"
             placeholder="Search for article by name, author, year..." title="Work search">
 
+        <!-- initialises the go back button to lead to demo page -->
         <button class="gobackbtn" onclick="document.location='DemoPage.html'">Go Back</button>
     </div>
 
-
+    <!-- initialises the database table and the data stored in it -->
     <div class="tablesearch">
         <table id="SETable" align="center">
             <tr class="header">
@@ -329,16 +295,6 @@
     </div>
 
     <script>
-        function getDate() {
-            n = new Date();
-            y = n.getFullYear();
-            m = n.getMonth() + 1;
-            d = n.getDate();
-            document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
-        }
-    </script>
-
-    <script>
         function searchFunction() {
             // Declare starting variables
             var input = document.getElementById("SEInput");
@@ -366,6 +322,7 @@
             }
         }
 
+        // function to add data as a row
         function addRow() {
             var myTitle = document.getElementById("title");
             var author = document.getElementById("author(s)");
@@ -381,6 +338,8 @@
             row.insertCell(1).innerHTML = myName.value;
             row.insertCell(2).innerHTML = age.value;
         }
+
+        // function to delete data
         function deleteRow(obj) {
 
             var index = obj.parentNode.parentNode.rowIndex;
@@ -390,6 +349,17 @@
 
     </script>
 
+    <!-- function to retrieve the current date -->
+    <script>
+        function getDate() {
+            n = new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate();
+            document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+        }
+    </script>
+    <!-- inserts credit caption at bottom of page -->
     <p>This project was created and is maintained by <a href="https://github.com/CISE2020/ProjectFound">Project
             Found</a>.&#32;</p>
     <p>Last updated on
