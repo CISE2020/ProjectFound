@@ -9,6 +9,8 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="shortcut icon" href="a198cd0c_e2f0_4c99_ba51_342624a24db9_WP4_icon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,900&display=swap" rel="stylesheet">
+
+    <!-- style formatting for webpage elements -->
     <style>
         * {
             box-sizing: border-box;
@@ -117,7 +119,7 @@
     <button class="manageaccounts" onclick="document.location='Search.html'">Manage Accounts</button>
     <h2>Search for articles by name, author, and more!</h2>
 
-    <!-- initialises the search bar -->
+    <!-- initialises the search filter bar -->
     <div class="centerenter">
         <input type="text" id="SEInput" onkeyup="searchFunction()"
             placeholder="Search for article by name, author, year..." title="Work search">
@@ -295,6 +297,7 @@
     </div>
 
     <script>
+        // function to search the database for matching input from user
         function searchFunction() {
             // Declare starting variables
             var input = document.getElementById("SEInput");
