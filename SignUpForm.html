@@ -74,6 +74,7 @@
     <!-- adding HTML-->
     <form action="/action_page.php">
 
+        <!-- sign up form elements -->
         <div class="container">
             <label><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="uname" required>
@@ -88,16 +89,17 @@
             <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
             <label for="access"><b>Acesss Type</b></label>
+            
+            <!-- option for user types -->
             <select name="access" id="access">
                 <option value="User"> - </option>
                 <option value="Submitter">Submitter</option>
                 <option value="Moderator">Moderator</option>
                 <option value="Analyst">Analyst</option>
                 <option value="Admin">Admin</option>
-
-
             </select>
 
+            <!-- terms and conditions disclaimer text -->
             <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
             <!-- initialisation of sign up button -->
