@@ -1,7 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- webpage style formatting -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- automatic style reference sheet links -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+<!-- style formatting for webpage elements -->
 <style>
     th {
         cursor: pointer;
@@ -25,14 +39,13 @@
         margin-left: 40px;
     }
 
+    /* style formatting for background of header */
     .bgg-info {
         background-color: #e24b05;
     }
 
     /*set a style for the buttons*/
     button {
-        /* background-color: #e24b05;  */
-
         background-color: #f44336;
         color: white;
         padding: 14px 20px;
@@ -41,13 +54,9 @@
         cursor: pointer;
         width: 100%;
     }
-
-    button {
-        background-color: #f44336;
-        color: #ffff;
-    }
 </style>
 
+<!-- initialises the database table and the data column stored in it -->
 <table class="table table-striped">
     <tr class="bg-info">
         <th class="bgg-info" data-colname="name" data-order="desc">Name &#9650</th>
@@ -59,10 +68,11 @@
     </tbody>
 </table>
 
+<!-- initialises the cancel button, leads to admin home page -->
 <button class="cancelbtn" onclick="document.location='AdminHomePage.html'">Cancel</button>
 
-
 <script>
+    // initialises information of users in the system
     var myArray = [
         { 'name': ' Michael', 'age': '30', 'birthdate': '11/10/1989', 'account': 'Submitter' },
         { 'name': ' Mila', 'age': '32', 'birthdate': '10/01/1989', 'account': 'Analyst' },
@@ -75,6 +85,7 @@
         { 'name': ' Fiona', 'age': '19', 'birthdate': '09/26/1992', 'account': 'Moderator' },
     ]
 
+    // allows user to search table according to column information
     buildTable(myArray)
     $('th').on('click', function () {
         var column = $(this).data('colname')
@@ -95,7 +106,7 @@
         $(this).html(text)
         buildTable(myArray)
     })
-
+    // builds the table from existing array of information
     function buildTable(data) {
         var table = document.getElementById('myTable')
         table.innerHTML = ''
@@ -115,3 +126,5 @@
         }
     }
 </script>
+
+</html>
