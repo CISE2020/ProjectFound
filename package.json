@@ -1,9 +1,12 @@
 {
   "name": "test",
   "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
     "test": "make test",
-    "start": "node index.js"
+    "start": "node src/index.js",
+    "build": "webpack"
+
   },
   "author": "",
   "license": "ISC",
