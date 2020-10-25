@@ -9,7 +9,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="shortcut icon" href="a198cd0c_e2f0_4c99_ba51_342624a24db9_WP4_icon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,900&display=swap" rel="stylesheet">
-    
+
     <!-- style formatting for webpage elements -->
     <style>
         * {
@@ -39,7 +39,8 @@
         #SEInput:focus {
             outline: none
         }
-/* formatting for the database result table */
+
+        /* formatting for the database result table */
         #SETable {
             border-collapse: collapse;
             width: 85%;
@@ -95,7 +96,7 @@
             transition: 0.3s;
         }
 
-/* formatting for the go back button */
+        /* formatting for the go back button */
         .gobackbtn {
             margin-left: 40px;
         }
@@ -116,11 +117,11 @@
         <input type="text" id="SEInput" onkeyup="searchFunction()"
             placeholder="Search for article by name, author, year..." title="Work search">
 
-            <!-- initialises the go back button to lead to demo page -->
+        <!-- initialises the go back button to lead to demo page -->
         <button class="gobackbtn" onclick="document.location='HomePage.html'">Go Back</button>
     </div>
 
-<!-- initialises the database table and the data stored in it -->
+    <!-- initialises the database table and the data stored in it -->
     <div class="tablesearch">
         <table id="SETable" align="center">
             <tr class="header">
