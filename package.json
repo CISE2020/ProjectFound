@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "scripts": {
     "test": "make test",
-    "start": "index.js"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "description": "app",
   "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^8.1.1"
+    "chai": "4.2.0",
+    "mocha": "8.1.1"
   },
   "engine": {
     "node": "v14.8.0",

@@ -1,1 +1,1 @@
-web: gjem-script app:server
+web: node index.js
