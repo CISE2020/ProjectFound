@@ -1,3 +1,3 @@
 # ProjectFound
 
-file:///Users/gracesubianto/Desktop/GitHub/CISE-Projects/ProjectFound/HomePage.html
+https://git.heroku.com/gjem-script.git
