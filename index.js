@@ -1,12 +1,10 @@
-const PORT = process.env.PORT || 5000;
-var express = require('express');
+const express = require('express');
 const app = express();
+const path = require('path');
+const port = process.env.PORT || 5000;
 
-var http = require('http');
-var server = http.Server(app);
-
-app.use(express.static('client'));
-
-server.listen(PORT, function () {
-  console.log('Chat server running');
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/HomePage.html'));
 });
+
+app.listen(port, () => console.log(`test listening on port ${port}!`));
