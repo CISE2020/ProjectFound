@@ -3,7 +3,6 @@
 
 <head>
 
-    <!-- automatic style reference sheet links -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -37,6 +36,9 @@
         width: 100%;
     }
 
+    h2, span, b {
+            font-family: 'Nunito Sans', sans-serif;
+        }
     /* set a hover effect for the button*/
     button:hover {
         opacity: 0.8;
@@ -90,7 +92,7 @@
             <button class="submit">Login</button>
 
             <button class="submit" onclick="document.location='SignUpForm.html'">Sign Up</button>
-            <input type="checkbox" checked="checked"> Remember me
+            <input type="checkbox" checked="checked"> <label><b>Remember Me</b></label>
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
