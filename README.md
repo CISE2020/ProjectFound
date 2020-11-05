@@ -4,7 +4,8 @@
 
 ## App Description:
 This repository contains the Software Engineering Evidence Repository (SEER) project for the CISE paper at the Auckland University of Technology.
-A database project that makes use of filters to sort throught existing articles on Software Engineering.
+
+A database project that makes use of filters to sort throught existing articles on the topic of Software Engineering.
 
 Deployed application [found here!](https://gjem-script.herokuapp.com/)
 
